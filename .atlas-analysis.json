@@ -1,0 +1,97 @@
+{
+  "projectType": "api-service",
+  "projectName": "Digi Rehab",
+  "projectDescription": "A FastAPI-based exercise prescription system for rehabilitation, enabling providers to manage joints, problems, exercises, and patient prescriptions through a RESTful API and React frontend.",
+  "theme": "palm",
+  "primaryColor": "#7c7c80",
+  "lightColor": "#151c28",
+  "darkColor": "#f2f2f2",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": ["introduction", "quickstart", "configuration"]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/data-model",
+              "concepts/exercise-categories",
+              "concepts/prescriptions"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/installation",
+              "guides/database-setup",
+              "guides/frontend",
+              "guides/deployment"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["api/overview"]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/joints",
+              "api/problems",
+              "api/exercises",
+              "api/categories",
+              "api/prescriptions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Joint and problem management for rehabilitation tracking",
+    "Therapeutic exercise library with images, videos, and difficulty levels",
+    "Comprehensive exercise categorization (body area, type, position, movement, equipment)",
+    "Patient prescription creation with per-exercise custom parameters",
+    "React frontend with Tailwind CSS and react-query",
+    "SQLite/PostgreSQL/MySQL database support via SQLAlchemy",
+    "Full CRUD REST API built with FastAPI and Pydantic v2"
+  ],
+  "publicApiSurface": [
+    "GET /api/v1/joints/",
+    "POST /api/v1/joints/",
+    "GET /api/v1/joints/{joint_id}",
+    "PUT /api/v1/joints/{joint_id}",
+    "DELETE /api/v1/joints/{joint_id}",
+    "GET /api/v1/problems/",
+    "POST /api/v1/problems/",
+    "GET /api/v1/problems/{problem_id}",
+    "GET /api/v1/problems/joint/{joint_id}",
+    "GET /api/v1/exercises/",
+    "POST /api/v1/exercises/",
+    "GET /api/v1/exercises/{exercise_id}",
+    "GET /api/v1/exercises/problem/{problem_id}",
+    "GET /api/v1/exercises/predefined",
+    "GET /api/v1/categories/body-areas",
+    "GET /api/v1/categories/exercise-types",
+    "GET /api/v1/categories/positions",
+    "GET /api/v1/categories/movements",
+    "GET /api/v1/categories/equipment-types",
+    "POST /api/v1/categories/{category-type}",
+    "GET /api/v1/prescriptions/",
+    "POST /api/v1/prescriptions/",
+    "GET /api/v1/prescriptions/{prescription_id}",
+    "GET /api/v1/prescriptions/patient/{patient_name}",
+    "GET /api/v1/prescriptions/provider/{provider_name}",
+    "PATCH /api/v1/prescriptions/{prescription_id}/status",
+    "POST /api/v1/prescriptions/{prescription_id}/exercises",
+    "GET /health"
+  ]
+}
